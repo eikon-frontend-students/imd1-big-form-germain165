@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PureGym - Créer ta carte médicale</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <div class="banner">
+        <img src="banner-gym.jpg" alt="PureGym Banner" />
+      </div>
+
+      <img src="logo-puregym.png" alt="PureGym Logo" class="logo" />
+
+      <div class="circle-big"></div>
+      <div class="circle-small"></div>
+      <div class="circle-haltere">
+        <img src="haltere.png" alt="Haltère" />
+      </div>
+
+      <div class="bottom-left"></div>
+      <div class="bottom-right"></div>
+
+      <h1 class="page-title">Créer ta carte médicale</h1>
+
+      <div class="progress">
+        <div class="step"></div>
+        <div class="line"></div>
+        <div class="step"></div>
+        <div class="line"></div>
+        <div class="step active"></div>
+      </div>
+
+      <div class="center-zone-form">
+        <div class="blob-form">
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="email">Adresse mail</label>
+              <div class="input-icon-wrapper">
+                <i class="fa-regular fa-user input-icon"></i>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <div class="phone-container">
+                <div class="phone-prefix">
+                  <span>+41</span>
+                  <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                </div>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="77 803 39 03"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Nombre d'entrainement par semaine</label>
+              <div class="counter-container">
+                <button type="button" class="counter-btn" id="minus-btn">
+                  -
+                </button>
+                <input
+                  type="number"
+                  id="training-count"
+                  name="training_count"
+                  value="1"
+                  min="0"
+                  max="7"
+                  readonly
+                />
+                <button type="button" class="counter-btn" id="plus-btn">
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="duration">Durer entrainement</label>
+              <div class="input-icon-wrapper">
+                <i class="fa-solid fa-child-reaching input-icon"></i>
+                <input
+                  type="text"
+                  id="duration"
+                  name="duration"
+                  placeholder="Ex: 1h30"
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const minusBtn = document.getElementById("minus-btn");
+      const plusBtn = document.getElementById("plus-btn");
+      const countInput = document.getElementById("training-count");
+
+      minusBtn.addEventListener("click", () => {
+        let current = parseInt(countInput.value);
+        if (current > 0) countInput.value = current - 1;
+      });
+
+      plusBtn.addEventListener("click", () => {
+        let current = parseInt(countInput.value);
+        if (current < 7) countInput.value = current + 1;
+      });
+    </script>
+  </body>
+</html>

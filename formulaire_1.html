@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="banner">
+        <img
+          src="https://www.puregym.swiss/wp-content/uploads/2022/11/03.jpg"
+        />
+      </div>
+
+      <img
+        src="https://careers.recruiteecdn.com/image/upload/q_auto,w_1920,c_limit/production/images/AZny/EUKv4VCNj3m2.png"
+        class="logo"
+      />
+
+      <div class="circle-big"></div>
+      <div class="circle-small"></div>
+
+      <div class="circle-haltere">
+        <img src="images/haltere.png" />
+      </div>
+
+      <div class="bottom-left"></div>
+      <div class="bottom-right"></div>
+
+      <h1 class="page-title">Créer ta carte médicale</h1>
+
+      <div class="progress">
+        <div class="step active"></div>
+        <div class="line"></div>
+        <div class="step"></div>
+        <div class="line"></div>
+        <div class="step"></div>
+      </div>
+
+      <div class="center-zone">
+        <div class="blob">
+          <form action="formulaire_1.html">
+            <label>Nom complet</label>
+            <input type="text" placeholder="Ex Germain Audemard" required />
+            <label>Date de naissance</label>
+            <input type="date" required />
+
+            <label>Genre</label>
+
+            <div class="radio-group">
+              <label><input type="radio" name="genre" /> Homme</label>
+              <label><input type="radio" name="genre" /> Femme</label>
+              <label><input type="radio" name="genre" /> Autre</label>
+            </div>
+
+            <div class="row">
+              <div>
+                <label>Taille (cm)</label>
+                <input type="number" placeholder="175" />
+              </div>
+
+              <div>
+                <label>Poids (kg)</label>
+                <input type="number" placeholder="75" />
+              </div>
+            </div>
+
+            <button class="next-btn">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
